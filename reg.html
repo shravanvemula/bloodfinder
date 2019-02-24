@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Blood Finder</title>
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
+ <style>
+form
+{
+background-color:#000000;
+height:100%;
+width:100%;
+}
+</style>
+  
+ <script>
+  
+  
+function abc()
+{
+var name = /^[a-zA-Z]+$/g;
+var mname = /^[a-zA-Z]+$/g;
+var lname = /^[a-zA-Z]+$/g;
+var fname = /^[a-zA-Z]+$/g;
+var moname = /^[a-zA-Z]+$/g;
+var password=/^[a-zA-Z0-9%$#@!&*]{6,8}$/;
+var dd = /^(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/;
+var mm = /^(0[1-9]|1[0-2])$/;
+var yyyy = /^[0-9]{4}$/;
+var phone = /^\d{10,}$/;
+
+var email=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/g;
+
+var forname = document.getElementById('name').value;
+var formname = document.getElementById('mname').value;
+var forlname = document.getElementById('lname').value;
+var forfname = document.getElementById('fname').value;
+var formoname = document.getElementById('moname').value;
+var forpassword = document.getElementById('password').value;
+var fordd = document.getElementById('dd').value;
+var formm = document.getElementById('mm').value;
+var foryyyy = document.getElementById('yyyy').value;
+var forphone = document.getElementById('phone').value;
+var foremail = document.getElementById('email').value;
+
+var d=new Date();
+var thisyear=d.getFullYear();
+var age=parseInt(thisyear)-parseInt(foryyyy);
+document.getElementById('age').value=age;
+
+if(!(name.test(forname)))
+{
+alert("Wrong input for NAME");
+}
+if(!(mname.test(formname)))
+{
+alert("Wrong input for MIDDLENAME");
+}
+if(!(lname.test(forlname)))
+{
+alert("Wrong input for LASTNAME");
+}
+if(!fname.test(forfname))
+{
+alert("Wrong input for FATHERNAME"+forfname+" "+name.test(forfname));
+}
+if(!moname.test(formoname))
+{
+alert("Wrong input for MOTHERNAME");
+}
+if(forname==forlname)
+{
+alert("Wrong input duplicate");
+}
+if(!password.test(forpassword))
+{
+alert("Wrong input for password");
+}
+if(!(dd.test(fordd)))
+{
+alert("Wrong input for DATE");
+}
+ if(!(mm.test(formm)))
+{
+alert("Wrong input for MONTH");
+}
+ if(!(yyyy.test(foryyyy)))
+{
+alert("Wrong input for YEAR");
+}
+if(!(phone.test(forphone)))
+{
+alert("Wrong input for PHONE");
+}
+if(!(email.test(foremail)))
+{
+alert("Wrong input for EMAIL");
+}
+
+
+
+}
+</script>
+
+</head>
+<body>
+<div class="main">
+<div class="page">
+<div class="header">
+<div class="banner">
+
+
+</div>
+<div class="topmenu">
+<ul>
+  <li style="border-left: medium none;"><a href="index.html">Home</a></li>
+  <li><a href="#" >About Us</a></li>
+  
+  
+  <li><a href="#">Login</a></li>
+  <li><a href="register.html">Register</a></li>
+  <li><a href="#">Help</a></li>
+  
+    <li><form  action="/action_page.php">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <input type="text" placeholder="Enter Location..." size="50" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form></li>
+  
+</ul>
+</div>
+</div>
+<div class="content">
+<img src="images/copyright.gif" class="copyright" alt="Shravan and Group"></a>
+<div class="content-in">
+<div class="left-panel">
+<h2> </h2>
+<div class="left-content">
+<ul>
+  <li><a href="#" class="fa fa-search">&nbsp &nbsp Find a Donor?</a></li>
+  <br><br>
+  <li><a href="#"class="fa fa-search">&nbsp &nbsp Find a Blood Centre?</a></li>
+  <br><br>
+  <li><a href="#"class="fa fa-handshake">&nbsp &nbsp Want to be a Donor?</a></li>
+  <br><br>
+  <li><a href="#"class="fa fa-book">&nbsp  Post your Blood Request</a></li>
+  <br><br>
+ 
+ 
+  
+</ul>
+</div>
+<div class="gap"></div>
+<h2>Recent Updates</h2>
+<div  class="left-content">
+<ol>
+  <li><a href="http://www.thehealthsite.com/news/naga-students-initiate-blood-donation-camp-for-unprivileged-patients-ag0618/">Naga students initiate blood-donation camp for unprivileged patients.</a></li>
+  <li><a href="http://www.india.com/news/india/kerala-temple-asks-devotees-to-donate-blood-for-abhishek-during-celebration-of-annual-festival-2930746/">Kerala: Temple Asks Devotees to Donate Blood For 'Abhishek' During Celebration of Annual Festival</a></li>
+  <li><a href="http://www.thehealthsite.com/news/6-million-people-in-india-signed-up-as-blood-donors-on-facebook-ag0118/">6 million people in India signed up as blood donors on Facebook</a></li>
+ </ol>
+</div>
+</div>
+<div class="right-panel">
+<div class="right-panel-in">
+<div class="row">
+<div align="center">
+
+<h2 class="title">Register Form</h2>
+<!-- NAMES-->
+<form>
+<br>
+FName:<INPUT TYPE="TEXT" NAME="FIRSTNAME" placeholder="FIRSTNAME" id="name">
+<br><br>
+Blood Group:
+ <select name="xyz">
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="A1+">A1+</option>
+  <option value="A1-">A1-</option>
+  <option value="A1B+">A1B+</option>
+  <option value="A1B-">A1B-</option>
+  <option value="A2+">A2+</option>
+  <option value="A2B-">A2B+</option>
+  <option value="A2B-">A2B-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="Bombay Blood Group">Bombay Blood Group</option>
+  <option value="O+">O+</option>
+  
+  
+</select> 
+<br><br>
+
+<!-- DATE-OF-BIRTH-->
+DATE:<INPUT TYPE="TEXT" NAME="DD" placeholder="DD" id="dd" size="1" >
+MONTH:<INPUT TYPE="TEXT" NAME="MM" placeholder="MM" id="mm" size="1">
+YEAR:<INPUT TYPE="TEXT" NAME="YYYY" placeholder="YYYY" id="yyyy" size="4">
+<BR><BR>
+<!-- GENDER-->
+GENDER:&nbspMALE<INPUT TYPE="RADIO" NAME="MALE">&nbsp&nbspFEMALE<INPUT TYPE="RADIO" NAME="MALE">
+<BR><BR>
+<!-- PHONE NUMBER-->
+MOBILENO:<INPUT TYPE="TEXT" NAME="MOBILE" placeholder="MOBILE NUMBER" SIZE="25" id="phone">
+<BR><br>
+<!-- E-MAIL-->
+EMAIL:<INPUT TYPE="text" NAME="EMAIL" placeholder="EMAIL ADDRESS" SIZE="46" id="email">
+<BR><br>
+<!-- ADDRESS-->
+Country<INPUT TYPE="TEXT" NAME="ADD" placeholder="COUNTRY" >
+<BR><br>
+Distirct<INPUT TYPE="TEXT" NAME="ADD" placeholder="DISTIRCT" >
+<br><br>
+City<INPUT TYPE="TEXT" NAME="ADD" placeholder="CITY" >
+<br><br>
+AGE is:<INPUT TYPE="TEXT" NAME="AGE" id="age" >
+<BR><br>
+
+PASSWORD:<input type="password" name="password" placeholder="PASSWORD" id="password"><br><br>
+<!-- LANG. KNOWN-->
+LANGUAGES KNOWN:
+<INPUT TYPE="CHECKBOX" NAME="TELUGU"/>TELUGU
+<INPUT TYPE="CHECKBOX" NAME="HINDI"/>HINDI
+<INPUT TYPE="CHECKBOX" NAME="ENGILSH"/>ENGLISH
+
+<BR><br>
+<!-- SUBMIT-->
+<input type="Submit" name="submit" onClick="abc()">
+<!-- RESET-->
+<BR><br>
+<input type="reset" value="reset"></div>
+</form>
+<div class="footer">
+<p>&copy; Designed by <a target="_blank" href="http://shravan.freeasphost.net/data/">Shravan and group</a></p>
+<ul>
+  <li style="border-left: medium none;"><a href="index.html">Home</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Recent articles</a></li>
+  <li><a href="#">Email</a></li>
+  <li><a href="#">Resources</a></li>
+  <li><a href="#">Links</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</body></html>
