@@ -3,4 +3,4 @@ This project includes mainly three modules: Admin,Users (acceptors),Donors. User
 The users who are interested in donating blood can register through this web page and become a donor.
 Nearest(registered) donor will get a call or a message from the needful user and also it shows the address of the registered donor.
 This is a project with the objective to develop a user friendly website where a user is provided with a search bar. This system saves precious time of user and very efficient to use.
-This project built using HTML,CSS,PHP and MYSQL.
+This project is built using HTML,CSS,PHP and MYSQL.
